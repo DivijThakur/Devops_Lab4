@@ -7,7 +7,11 @@ trigger:
 - main
 
 pool:
-  vmImage: 'COMP367-Windows'
+  name: COMP367-Windows
+  demands:
+  - msbuild
+  - visualstudio
+  - vstest
 
 variables:
   solution: '**/*.sln'
